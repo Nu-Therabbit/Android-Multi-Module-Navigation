@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/setting_nav_graph"
+    app:startDestination="@id/settingMainFragment">
+
+    <fragment
+        android:id="@+id/settingMainFragment"
+        android:name="com.anusorn.feature.setting.SettingMainFragment"
+        android:label="SettingMainFragment"
+        tools:layout="@layout/fragment_setting_main">
+        <argument
+            android:name="customParams"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_settingMainFragment_to_settingUserFragment"
+            app:destination="@id/settingUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingUserFragment"
+        android:name="com.anusorn.feature.setting.user.SettingUserFragment"
+        android:label="SettingUserFragment"
+        tools:layout="@layout/fragment_setting_user">
+
+        <argument
+            android:name="customParams"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_settingUserFragment_to_settingDeviceFragment"
+            app:destination="@id/settingDeviceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingDeviceFragment"
+        android:name="com.anusorn.feature.setting.device.SettingDeviceFragment"
+        android:label="SettingDeviceFragment"
+        tools:layout="@layout/fragment_setting_device">
+        <argument
+            android:name="customParams"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

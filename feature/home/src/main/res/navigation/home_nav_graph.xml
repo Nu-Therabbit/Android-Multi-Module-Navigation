@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeMainFragment">
+
+    <fragment
+        android:id="@+id/homeMainFragment"
+        android:name="com.anusorn.feature.home.HomeMainFragment"
+        android:label="HomeMainFragment"
+        tools:layout="@layout/fragment_home_main">
+        <argument
+            android:name="customParams"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_homeMainFragment_to_homeAboutFragment"
+            app:destination="@id/homeAboutFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeAboutFragment"
+        android:name="com.anusorn.feature.home.about.HomeAboutFragment"
+        android:label="HomeAboutFragment"
+        tools:layout="@layout/fragment_home_about">
+        <argument
+            android:name="params"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_homeAboutFragment_to_homeDetailFragment"
+            app:destination="@id/homeDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeDetailFragment"
+        android:name="com.anusorn.feature.home.detail.HomeDetailFragment"
+        android:label="HomeDetailFragment"
+        tools:layout="@layout/fragment_home_detail">
+        <argument
+            android:name="customParams"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

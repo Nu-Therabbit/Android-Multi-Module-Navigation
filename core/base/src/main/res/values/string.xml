@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dump_text">Dump text</string>
+    <string name="input_hint_state_label">Type for set state view</string>
+</resources>
